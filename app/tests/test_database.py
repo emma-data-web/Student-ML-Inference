@@ -1,6 +1,6 @@
-from database.pull_data import get_new_data
+from app.database.pull_data import get_new_data
 import pandas as pd
-from database.pull_data import db_conn
+from app.database.pull_data import db_conn
 import pytest
 """
 @pytest.fixture

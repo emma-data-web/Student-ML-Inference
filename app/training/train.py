@@ -5,9 +5,9 @@ from sklearn.pipeline import Pipeline
 from lightgbm import LGBMRegressor
 from sklearn.model_selection import train_test_split
 import joblib
-from database.pull_data import get_new_data
-from utils.config_helper import get_config
-from utils.logger_helper import set_logger
+from app.database.pull_data import get_new_data
+from app.utils.config_helper import get_config
+from app.utils.logger_helper import set_logger
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.preprocessing import OrdinalEncoder
@@ -72,12 +72,12 @@ def grade_trained_model(filename=config["trained_models_filename"]["student_mode
 
     param_dist = {
     'model__num_leaves': [31, 50, 100],       # controls complexity
-    'model__max_depth': [-1, 5, 10],          # -1 means unlimited
+    'model__max_depth': [-1, 5, 10],         
     'model__learning_rate': [0.01, 0.05, 0.1],
-    'model__n_estimators': [100, 500, 1000],  # number of boosting rounds
+    'model__n_estimators': [100, 500, 1000],  
     'model__feature_fraction': [0.8, 0.9, 1.0],
     'model__bagging_fraction': [0.8, 1.0],
-    'model__bagging_freq': [0, 5]             # 0 = no bagging
+    'model__bagging_freq': [0, 5]             
     }
 
     grid = RandomizedSearchCV(

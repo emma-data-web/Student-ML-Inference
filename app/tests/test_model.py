@@ -2,7 +2,7 @@ import joblib
 import numpy as np
 import pandas as pd
 import pytest
-from utils.config_helper import get_config
+from app.utils.config_helper import get_config
 
 config = get_config()
 

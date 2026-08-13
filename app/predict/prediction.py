@@ -1,7 +1,7 @@
 import joblib
 import pandas as pd
-from utils.config_helper import get_config
-from database.pull_data import get_new_data
+from app.utils.config_helper import get_config
+from app.database.pull_data import get_new_data
 
 config = get_config()
 model = joblib.load(config["trained_models_filename"]["student_model"])

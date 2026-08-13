@@ -1,10 +1,10 @@
 from flask import Flask, jsonify, request
 import pandas as pd
 import numpy as np
-from utils.logger_helper import set_logger
-from database.pull_data import get_new_data
+from app.utils.logger_helper import set_logger
+from app.database.pull_data import get_new_data
 import joblib
-from utils.config_helper import get_config
+from app.utils.config_helper import get_config
 
 config = get_config()
 

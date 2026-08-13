@@ -2,8 +2,8 @@ from sqlalchemy import create_engine
 import os
 from dotenv import load_dotenv
 import pandas as pd
-from utils.logger_helper import set_logger
-from utils.config_helper import get_config
+from app.utils.logger_helper import set_logger
+from app.utils.config_helper import get_config
 
 load_dotenv()
 

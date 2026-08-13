@@ -1,9 +1,9 @@
 import pandas as pd
 import joblib
-from database.pull_data import get_new_data
-from utils.config_helper import get_config
-from utils.logger_helper import set_logger
-from database.pull_data import db_conn
+from app.database.pull_data import get_new_data
+from app.utils.config_helper import get_config
+from app.utils.logger_helper import set_logger
+from app.database.pull_data import db_conn
 from datetime import datetime
 import time
 
